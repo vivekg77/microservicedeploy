@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+data:
+  spring.kafka.properties.bootstrap.servers: lkc-pm552-l9wgv.eu-west-2.aws.glb.confluent.cloud:9092
+  spring.kafka.properties.schema.registry.url: https://psrc-yoz1k.eu-central-1.aws.confluent.cloud
+  spring.kafka.properties.security.protocol: SASL_SSL
+  spring.kafka.properties.sasl.mechanism: PLAIN
+  spring.kafka.properties.basic.auth.credentials.source: USER_INFO
+  spring.kafka.properties.sasl.jaas.config: org.apache.kafka.common.security.plain.PlainLoginModule required username='VBP7XTMB4C34H4ZT' password='a79R1Ewz2p/FdqY8pjqbsYWO0PnkvBnc1AQWyWb0c6I1jTw28+vjv0ZtxcXoJVpC';
+  spring.kafka.properties.schema.registry.basic.auth.user.info: "4XDOSS3GPYZDDJ4N:0QiTlZo/k3JPzBz8u/AXv8nO3b8X/fS0q3k5ss4d8k9bbX3TSxUF7T+miKDG9Qmg"
+  sns.arn.gcm: arn:aws:sns:eu-west-1:672537796276:app/GCM/dev-notification-gcm
+  sns.arn.apn: arn:aws:sns:eu-west-1:672537796276:app/APNS_SANDBOX/dev-notification-apns
